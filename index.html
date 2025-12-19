@@ -59,7 +59,8 @@
 
       /* Expanded card */
       .role-card.expanded {
-        width: 1218.66px;
+        /* width: 1218.66px; */
+        width: 1100px;
       }
 
       /* =========================================================
@@ -383,117 +384,116 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header sticky top-0 z-50 bg-white shadow-md">
-      <!-- Top Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <!-- ================= TOP BAR ================= -->
       <div
-        class="header-top bg-[#004B87] px-20 py-4 flex items-center justify-between min-h-[90px]"
+        class="bg-[#004B87] px-4 sm:px-6 lg:px-20 py-4 flex flex-col sm:flex-row items-center sm:justify-between gap-4"
       >
         <!-- Logo -->
-        <div class="logo text-[#F5F5F5] w-[124px] h-[72px] leading-none">
-          <div class="w-[120px] text-[48px] font-extrabold tracking-wide">
+        <div class="text-[#F5F5F5] leading-none text-center sm:text-left">
+          <div class="text-[36px] sm:text-[42px] font-extrabold tracking-wide">
             MAI
           </div>
-          <div class="text-[8px] w-[114px] tracking-[0.25em] mt-[-4px]">
+          <div class="text-[8px] tracking-[0.25em] mt-[-4px]">
             We Build Homes
           </div>
         </div>
 
         <!-- Help Section -->
-        <div
-          class="help-section bg-white rounded-md px-5 py-2.5 flex items-center gap-3 mr-5"
-        >
-          <span class="text-sm text-gray-800"
-            >Need help? We're here for you</span
-          >
+        <div class="bg-white rounded-md px-4 py-2 flex items-center gap-3">
+          <span class="text-sm text-gray-800 text-center sm:text-left">
+            Need help? We're here for you
+          </span>
+
           <div
-            class="help-icon w-9 h-9 rounded-full flex items-center justify-center text-[#004B87] bg-blue-100 cursor-pointer"
+            class="w-9 h-9 rounded-full flex items-center justify-center text-[#004B87] bg-blue-100 cursor-pointer"
           >
             <span class="material-icons text-[18px]">videocam</span>
           </div>
+
           <div
-            class="help-icon w-9 h-9 bg-blue-100 rounded-full flex items-center justify-center text-[#004B87] cursor-pointer"
+            class="w-9 h-9 rounded-full flex items-center justify-center text-[#004B87] bg-blue-100 cursor-pointer"
           >
             📞
           </div>
         </div>
 
-        <!-- Sign In Button -->
-        <div class="w-[137px] h-[50px]">
-          <button
-            class="bg-white/15 rounded-full border border-white/30 text-white px-4 py-2 flex items-center gap-3"
+        <!-- Sign In -->
+        <button
+          class="bg-white/15 rounded-full border border-white/30 text-white px-4 py-2 flex items-center gap-2"
+        >
+          <span
+            class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
           >
-            <span
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20"
-            >
-              <span class="material-icons text-white/80 text-[36px]">
-                account_circle
-              </span>
+            <span class="material-icons text-white/80 text-[24px]">
+              account_circle
             </span>
-            <span class="w-[53px] h-[18px] flex justify-center items-center"
-              >Sign In</span
-            >
-          </button>
-        </div>
+          </span>
+          <span>Sign In</span>
+        </button>
       </div>
 
-      <!-- Navigation Bar -->
-      <nav
-        class="bg-gray-100 md:px-10 lg:px-20 py-4 flex items-center justify-between h-[62px]"
-      >
-        <!-- Left Navigation -->
+      <!-- ================= NAV BAR ================= -->
+      <nav class="bg-gray-100 px-4 sm:px-6 lg:px-20 py-3">
         <div
-          class="flex items-center gap-10 text-[#003F6B] text-[15px] font-medium"
+          class="flex items-center justify-between flex-nowrap gap-4 overflow-x-auto"
         >
-          <a href="#" class="uppercase tracking-wide">Home</a>
-          <a href="#">How it Works</a>
-          <a href="#">Project</a>
-          <a href="#">Blogs</a>
-          <a href="#">DIY Worktops</a>
-        </div>
-
-        <!-- Right Actions -->
-        <div
-          class="flex items-center gap-6 text-[#003F6B] text-[13px] font-semibold tracking-widest uppercase"
-        >
-          <!-- Post Project -->
-          <div class="flex items-center gap-2 cursor-pointer">
-            <span
-              class="material-icons text-[20px] bg-blue-200 text-[#004B87] rounded-md p-1"
-            >
-              add
-            </span>
-            Post Project
+          <!-- LEFT NAV -->
+          <div
+            class="flex items-center gap-4 sm:gap-6 lg:gap-10 text-[#003F6B] font-medium text-[12px] sm:text-[13px] lg:text-[15px] whitespace-nowrap"
+          >
+            <a href="#" class="uppercase tracking-wide">Home</a>
+            <a href="#">How it Works</a>
+            <a href="#">Project</a>
+            <a href="#">Blogs</a>
+            <a href="#">DIY Worktops</a>
           </div>
 
-          <span class="text-gray-400">|</span>
+          <!-- RIGHT ACTIONS -->
+          <div
+            class="flex items-center gap-4 sm:gap-5 lg:gap-6 text-[#003F6B] font-semibold uppercase tracking-wider text-[11px] sm:text-[12px] lg:text-[13px] whitespace-nowrap"
+          >
+            <div class="flex items-center gap-1 cursor-pointer">
+              <span
+                class="material-icons text-[18px] sm:text-[20px] bg-blue-200 text-[#004B87] rounded-md p-1"
+              >
+                add
+              </span>
+              Post Project
+            </div>
 
-          <!-- Send Proposals -->
-          <div class="flex items-center gap-2 cursor-pointer">
-            <span class="material-icons text-[20px] text-[#004B87]">
-              send
+            <span class="text-gray-400">|</span>
+
+            <div class="flex items-center gap-1 cursor-pointer">
+              <span
+                class="material-icons text-[18px] sm:text-[20px] text-[#004B87]"
+              >
+                send
+              </span>
+              Send Proposals
+            </div>
+
+            <span class="text-gray-400">|</span>
+
+            <div class="flex items-center gap-1 cursor-pointer">
+              <span
+                class="material-icons text-[18px] sm:text-[20px] text-[#004B87]"
+              >
+                work
+              </span>
+              Apply Internship
+            </div>
+
+            <span class="text-gray-400">|</span>
+
+            <span class="material-icons text-[20px] cursor-pointer">
+              shopping_cart
             </span>
-            Send Proposals
           </div>
-
-          <span class="text-gray-400">|</span>
-
-          <!-- Apply Internship -->
-          <div class="flex items-center gap-2 cursor-pointer">
-            <span class="material-icons text-[20px] text-[#004B87]">
-              work
-            </span>
-            Apply Internship
-          </div>
-
-          <span class="text-gray-400">|</span>
-
-          <!-- Cart -->
-          <span class="material-icons text-[22px] cursor-pointer">
-            shopping_cart
-          </span>
         </div>
       </nav>
     </header>
+
     <main>
       <section class="relative w-full h-[1080px] overflow-hidden">
         <!-- Slideshow images -->
@@ -758,7 +758,7 @@
         </div>
       </section>
 
-      <section class="mai-section">
+      <section class="mai-section max-w-[1920px] mx-auto">
         <!-- Heading -->
         <div class="heading">
           <h1>MAI Leading Innovation in Construction & Property Improvement</h1>
