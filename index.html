@@ -30,7 +30,7 @@
       }
 
       /* =========================================================
-   ROLE CARDS WRAPPER (RESPONSIVE FIX)
+   ROLE CARDS WRAPPER
 ========================================================= */
       #roleWrapper {
         max-width: 1720px;
@@ -57,9 +57,7 @@
         transition: width 0.6s ease;
       }
 
-      /* Expanded card */
       .role-card.expanded {
-        /* width: 1218.66px; */
         width: 1100px;
       }
 
@@ -71,7 +69,7 @@
         width: 150px;
         height: 58px;
         top: 175.4px;
-        left: 90px; /* ← moved LEFT so it stays visible */
+        left: 70px; /* ensures visibility in collapsed state */
         transform: rotate(-90deg);
         transform-origin: center;
         font-family: "Orelega One", serif;
@@ -103,7 +101,6 @@
         opacity: 1;
       }
 
-      /* Title */
       .content h3 {
         height: 58px;
         font-family: "Orelega One", serif;
@@ -148,30 +145,29 @@
         gap: 13.33px;
       }
 
-      .primary {
-        width: 279.33px;
-        height: 49.11px;
-        border-radius: 140px;
-        background: #2086cee5;
-        color: white;
-        font-family: Montserrat;
-        font-size: 15.63px;
-        border: none;
-      }
-
+      .primary,
       .secondary {
         width: 279.33px;
         height: 49.11px;
         border-radius: 140px;
-        background: white;
-        border: 1.33px solid #003f6b;
-        color: #003f6b;
         font-family: Montserrat;
         font-size: 15.63px;
       }
 
+      .primary {
+        background: #2086cee5;
+        color: white;
+        border: none;
+      }
+
+      .secondary {
+        background: white;
+        border: 1.33px solid #003f6b;
+        color: #003f6b;
+      }
+
       /* =========================================================
-   PERSON IMAGE (STATE AWARE)
+   PERSON IMAGE
 ========================================================= */
       .person-frame {
         position: absolute;
@@ -199,7 +195,7 @@
       }
 
       /* =========================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE
 ========================================================= */
       @media (max-width: 1440px) {
         .role-card.expanded {
@@ -226,21 +222,21 @@
         .person-frame {
           position: relative;
           margin: 40px auto 0;
-          right: auto;
           left: auto;
+          right: auto;
           transform: none;
         }
 
         .actions {
           position: relative;
+          margin-top: 32px;
           top: auto;
           left: auto;
-          margin-top: 32px;
         }
       }
 
       /* =========================================================
-   MAI SECTION (UNCHANGED)
+   MAI SECTION
 ========================================================= */
       .mai-section .heading {
         text-align: center;
@@ -248,129 +244,86 @@
         margin: 0 auto 80px;
       }
 
-      /* Title */
       .mai-section .heading h1 {
-        max-width: 1440px;
-        height: 104px;
-
         font-family: "Montserrat", sans-serif;
-        font-weight: 600; /* SemiBold */
+        font-weight: 600;
         font-size: 43px;
         line-height: 100%;
-        letter-spacing: 0%;
-        text-align: center;
-
-        color: #333333;
-
-        margin: 0 auto 24px;
+        color: #333;
+        margin-bottom: 24px;
       }
 
-      /* Description */
       .mai-section .heading p {
-        max-width: 1310.66px;
-        height: 54px;
-
         font-family: "Montserrat", sans-serif;
-        font-weight: 400; /* Regular */
         font-size: 22px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-align: center;
-
-        color: #000000;
+        color: #000;
         opacity: 0.8;
-
-        margin: 0 auto;
       }
 
-      /* ================= TRADER NAV BUTTONS ================= */
-
+      /* =========================================================
+   TRADER NAV
+========================================================= */
       .trader-nav {
         width: 106.66px;
         height: 42.66px;
         display: flex;
         gap: 21.33px;
-        justify-content: center;
-        align-items: center;
-        margin: 30px auto 0; /* positions above CTA */
+        margin: 30px auto 0;
       }
 
       .nav-btn {
         width: 42.66px;
         height: 42.66px;
-        border: 1.6px solid #333333;
         border-radius: 50%;
-        background: transparent;
-        color: #333333;
+        border: 1.6px solid #333;
         font-size: 32px;
-        font-weight: 100;
-        line-height: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
-        transition: background 0.25s ease, transform 0.2s ease;
       }
 
-      .nav-btn:hover {
-        background: rgba(0, 0, 0, 0.05);
-        transform: scale(1.05);
-      }
-
-      .nav-btn:active {
-        transform: scale(0.95);
-      }
-
-      /* Image container */
+      /* =========================================================
+   STATS IMAGES
+========================================================= */
       .stats-images {
         position: relative;
-        width: 597.33px;
-        height: 785.33px;
+        width: 400.33px;
+        height: 620.33px;
+
         opacity: 0;
         transform: translateY(80px);
         transition: opacity 0.8s ease, transform 0.8s ease;
+        max-width: 100%;
+        margin-left: 0;
       }
 
-      /* Active state */
       .stats-images.visible {
         opacity: 1;
         transform: translateY(0);
       }
 
-      /* Shared image styling */
       .img-wrap {
         position: absolute;
         width: 404px;
         height: 333.33px;
         border-radius: 13.33px;
-        border: 4px solid #ffffff;
+        border: 4px solid #fff;
         overflow: hidden;
-        background: #ccc;
       }
 
-      .img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* img1 layout */
       .img-1 {
-        top: -52px;
-        left: -20px;
+        top: -22px;
+        left: -10px; /* Keep this */
       }
-
-      /* img2 layout */
       .img-2 {
-        top: 161px;
-        left: 124px;
+        top: 64px;
+        left: 80px; /* Changed from 124px - moves it more left */
+      }
+      .img-3 {
+        top: 200px;
+        left: 300px; /* Changed from 300px - moves it significantly more left */
       }
 
-      /* img3 (derived from UI visually) */
-      .img-3 {
-        top: 336px;
-        left: 300px;
-      }
       .fade-on-stats {
         transition: opacity 0.6s ease, transform 0.6s ease;
       }
@@ -714,45 +667,51 @@
           </div>
         </div>
       </section>
-      <section class="w-full bg-white relative" id="stats-section">
+      <section
+        id="stats-section"
+        class="relative w-full bg-white overflow-hidden"
+      >
         <div
-          class="relative max-w-[1920px] mx-auto px-[106.67px] pt-[120px] pb-[120px] flex gap-[120px]"
+          class="relative max-w-[1680px] mx-auto px-[120px] pt-[120px] pb-[120px] flex gap-[120px]"
         >
-          <!-- TEXT CONTENT -->
-          <div class="max-w-[861px]">
-            <!-- Heading -->
-            <h2
-              class="text-[#333333] font-montserrat font-semibold text-[43px] leading-none"
-            >
-              The Real Stats Behind UK Home<br />
-              Services
-            </h2>
+          <!-- CONTENT WRAPPER -->
+          <div class="flex w-full justify-between items-start gap-[120px]">
+            <!-- TEXT CONTENT -->
+            <div class="max-w-[660px] shrink-0">
+              <h2
+                class="font-montserrat font-semibold text-[43px] leading-[1.1] text-[#333333]"
+              >
+                The Real Stats Behind UK Home<br />
+                Services
+              </h2>
 
-            <!-- Description -->
-            <p
-              class="mt-[53px] text-[#333333]/80 font-montserrat text-[22px] leading-none max-w-[755px]"
-            >
-              Over 32% of homeowners say hiring a trustworthy professional is
-              harder than the actual renovation. Around 1 in 4 projects in the
-              UK either get delayed or dropped completely just because people
-              can’t find the right help. We built this platform to finally close
-              the gap between people who need home or commercial services and
-              the experts who can actually get the job done.
-            </p>
-          </div>
-
-          <!-- FLOATING IMAGES -->
-          <div class="stats-images">
-            <div class="img-wrap img-1">
-              <img src="assets/car1.jpg" alt="img1" />
+              <p
+                class="mt-[53px] max-w-[755px] font-montserrat text-[22px] leading-[1.35] text-[#333333]/80"
+              >
+                Over 32% of homeowners say hiring a trustworthy professional is
+                harder than the actual renovation. Around 1 in 4 projects in the
+                UK either get delayed or dropped completely just because people
+                can’t find the right help. We built this platform to finally
+                close the gap between people who need home or commercial
+                services and the experts who can actually get the job done.
+              </p>
             </div>
 
-            <div class="img-wrap img-2">
-              <img src="assets/car2.jpg" alt="img2" />
-            </div>
+            <!-- FLOATING IMAGES -->
+            <div class="relative w-[720px] h-[720px] shrink-0">
+              <div class="stats-images">
+                <div class="img-wrap img-1">
+                  <img src="assets/car1.jpg" alt="img1" />
+                </div>
 
-            <div class="img-wrap img-3">
-              <img src="assets/car3.png" alt="img3" />
+                <div class="img-wrap img-2">
+                  <img src="assets/car2.jpg" alt="img2" />
+                </div>
+
+                <div class="img-wrap img-3">
+                  <img src="assets/car3.png" alt="img3" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
